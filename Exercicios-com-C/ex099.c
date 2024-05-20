@@ -2,32 +2,35 @@
 #include <string.h>
 #include <time.h>
 
-void linha(int tam, int tipo){
+void linha(int tam){
     int c;
     while(c<=tam){
-        if(tipo == 1){
-            printf("=+=");
-        }
-        if(tipo == 2){
-            printf("=-=");
-        }
-        if(tipo == 3){
-            printf("-=-");
-        }
+        printf("=");
         c++;
     }
     printf("\n");
 }
 
-void cabecalho(char palavra[]){
-    linha(20, 3);
-    printf("    %s",palavra);
-    linha(20, 3);
+void cabecalho(char msg[]){
+    int tam;
+    tam = strlen(msg) + 4;
+    linha(tam);
+    printf("  %s\n",msg);
+    linha(tam);
 }
 
 int main(){
-    linha(20,3);
-    cabecalho("JUJUTSU KAISEN : GAME\n");
-    personagens
+    cabecalho("JUJUTSU KAISEN : GAME");
+    printf("Se prepare para a luta...\n")
+    printf("Seu personagem é o SATORO GOJO... Veja sobre: \n");
+    cabecalho("SATORO GOJO");
+    printf("1° Técnica: Intangibilidade(Mugen)\n");
+    printf("2° Técnica: Seis olhos(Rikugan)\n");
+    printf("3° Técnica: Azul(amplificação do fetiço)\n");
+    printf("4° Téncica: Vermelho(Reversão do fetiço dentro do mugen)\n");
+    printf("5° Técnica: Vazio Roxo(Azul+Vermelho)\n");
+    printf("Observe seu adversário Ryohmen Sukuna... Veja sobre: \n");
+    cabecalho("SUKUNA");
+
     return 0;
 }
